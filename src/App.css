@@ -1,38 +1,234 @@
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+
+:root{
+ /* --primery: hsl(216, 50%, 36%);
+  --secondary: hsl(216, 90%, 60%)hsl(219, 24%, 22%);
+  --white: hsl(180, 100%, 100%);
+  --dark-blue: hsl(219, 24%, 22%);*/
+  --white: #FFFFFF;
+  --light-green: #16E0BD;
+  --green: #14CFAE;
+  --dark-green: #1C4B43;
+  --dark-text: #303030;
+  --dark-background: #2E2E2E;
+  --black: #141414
+
+
+}
+
+*{
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  width: 100%
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page-container{
+  width: 100%;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navigation-bar{
+  width: 80px;
+  height: 100vh;
+  background-color:  var(--dark-green);
+  display: flex;
+  margin-left: auto
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navigation-bar .links{
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+}
+
+.navigation-bar .links a{
+  text-decoration: none;
+  width: 100px;
+  color: aliceblue;
+  margin: 0 10px 20px 10px;
+  transform: rotate(90deg);
+  font-variant: all-small-caps;
+  font-size: 18px;
+  font-weight: 400;
+
+}
+
+/*
+
+
+        Home Page Styling
+
+
+*/
+
+
+.home-page{
+  width: 100%;
+  height: calc(100vh);
+  display: flex;
+
+}
+
+.home-left{
+  text-align:left;
+  width: 45%;
+  height: calc(100vh);
+  padding: 1.5rem 0 1.5rem 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('../greenbg.png');
+  background-size: cover;
+
+}
+
+.logo {
+  font-size: 1.5rem;
+  letter-spacing: 2.5px;
+  cursor: pointer;
+}
+
+.logo span:first-child{
+  color: var(--white)
+}
+
+.logo span:last-of-type{
+  color: var(--dark-green)
+}
+
+.info h2{
+  color: var(--dark-green);
+  font-size: 2.5rem;
+  font-weight: normal;
+  line-height: 0px;
+  font-variant: all-small-caps;
+
+
+}
+
+.info .name{
+  color: var(--white);                        
+  font-size: 8rem;
+  font-weight: normal;
+  width: 150%;
+  position: relative;
+  z-index: 2;
+}
+
+.info p{
+
+  color: var(--white);
+  font-size: 1.5rem;
+  width: 70%;
+
+}
+
+.info .hire-button{
+  color: var(--white);
+}
+
+
+.social{
+  color: var(--white);
+  font-size: 1rem;
+  word-spacing: 0.7rem;
+}
+.hire-button, .brief-button{
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-variant: all-small-caps;
+  height: 50px;
+  width: 180px;
+  border: solid 1px var(--white);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 1.2rem;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.info .hire-button:hover{
+  background-color: var(--white);
+  color: var(--dark-green)
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.play-btn{
+  border: var(--white) solid 1px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  color:var(--dark-green);
+  position: absolute;
+  top: 60%;
+  left: 39.5%;
 }
+
+
+.home-right{
+  width: 55%;
+}
+
+.img-cover{
+  background-image: url('../cover2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 75%;
+}
+
+.brief{
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.brief .brief-button{
+  color: var(--dark-green);
+  background-color: var(--green);
+}
+
+
+/*
+.bg-effect{
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: var(--white);
+  opacity: 20%;;
+}
+
+.bg-effect.st{
+  bottom:-270px;
+  left: 90px;
+  transform: rotate(45deg);
+  
+}
+
+.bg-effect.rd{
+  width: 1500px;
+  height: 1500px;
+  top: 265px;
+  left: -700px;
+  transform: rotate(45deg);
+}
+
+.bg-effect.nd{
+  top:-350px;
+  left: 170px;
+  transform: rotate(45deg);
+}
+*/
